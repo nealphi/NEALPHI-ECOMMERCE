@@ -25,6 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const allowedOrigins = [
   "http://localhost:3000", // Local development URL
+  "https://nealphi-ecommerce.vercel.app",
   process.env.CLIENT_URL   // Production client URL from environment variable
 ];
 
