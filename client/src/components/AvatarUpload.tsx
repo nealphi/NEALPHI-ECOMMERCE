@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Image, Input, Stack, Text, useToast } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Input, Stack, useToast } from "@chakra-ui/react";
 import type { PutBlobResult } from "@vercel/blob";
 import axios from "axios";
 import { useState, useRef, useEffect } from "react";
