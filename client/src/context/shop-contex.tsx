@@ -158,19 +158,6 @@ export const ShopContextProvider = (props) => {
     });
   };
 
-  // const getCartItems = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       `${api}/product/cart/${localStorage.getItem("userID")}`
-  //     );
-  //     if (response.data.success) {
-  //       setCartItems(response.data.cartItems);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error getting cart items", error);
-  //   }
-  // };
-
   const getCartItems = async () => {
     try {
       const response = await axios.get(`${api}/product/cart`, {
@@ -240,7 +227,6 @@ export const ShopContextProvider = (props) => {
     }
   };
 
-
   const logout = async () => {
     try {
       await axios.post(`${api}/user/logout`, {}, { withCredentials: true });
@@ -257,8 +243,7 @@ export const ShopContextProvider = (props) => {
   }, []);
 
   useEffect(() => {
-    isAuthenticated && 
-    fetchAvailableMoney();
+    isAuthenticated && fetchAvailableMoney();
     fetchPurchasedItems();
     getCartItems();
   }, [isAuthenticated]);
