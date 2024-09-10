@@ -1,0 +1,143 @@
+[
+    {
+      "productName": "Wireless Mouse",
+      "price": 25.99,
+      "description": "A reliable wireless mouse with long battery life.",
+      "imageURL": "https://placehold.co/600x400/ADD8E6/ffffff?text=Wireless+Mouse",
+      "stockQuantity": 100
+    },
+    {
+      "productName": "Mechanical Keyboard",
+      "price": 79.99,
+      "description": "A mechanical keyboard with customizable RGB lighting.",
+      "imageURL": "https://placehold.co/600x400/FFB6C1/ffffff?text=Mechanical+Keyboard",
+      "stockQuantity": 50
+    },
+    {
+      "productName": "USB-C Hub",
+      "price": 29.99,
+      "description": "A versatile USB-C hub with multiple ports.",
+      "imageURL": "https://placehold.co/600x400/98FB98/ffffff?text=USB-C+Hub",
+      "stockQuantity": 75
+    },
+    {
+      "productName": "Noise-Canceling Headphones",
+      "price": 199.99,
+      "description": "High-quality noise-canceling headphones for an immersive audio experience.",
+      "imageURL": "https://placehold.co/600x400/FFDAB9/ffffff?text=Noise-Canceling+Headphones",
+      "stockQuantity": 30
+    },
+    {
+      "productName": "Smartphone Stand",
+      "price": 15.99,
+      "description": "A sleek and adjustable smartphone stand.",
+      "imageURL": "https://placehold.co/600x400/E6E6FA/ffffff?text=Smartphone+Stand",
+      "stockQuantity": 120
+    },
+    {
+      "productName": "Laptop Sleeve",
+      "price": 25.99,
+      "description": "A stylish and protective laptop sleeve.",
+      "imageURL": "https://placehold.co/600x400/FFE4E1/ffffff?text=Laptop+Sleeve",
+      "stockQuantity": 200
+    },
+    {
+      "productName": "Portable SSD",
+      "price": 99.99,
+      "description": "A high-speed portable SSD for quick data transfers.",
+      "imageURL": "https://placehold.co/600x400/AFEEEE/ffffff?text=Portable+SSD",
+      "stockQuantity": 80
+    },
+    {
+      "productName": "Wireless Charger",
+      "price": 29.99,
+      "description": "A fast wireless charger for your smartphone.",
+      "imageURL": "https://placehold.co/600x400/F5DEB3/ffffff?text=Wireless+Charger",
+      "stockQuantity": 150
+    },
+    {
+      "productName": "Bluetooth Speaker",
+      "price": 49.99,
+      "description": "A portable Bluetooth speaker with excellent sound quality.",
+      "imageURL": "https://placehold.co/600x400/DDA0DD/ffffff?text=Bluetooth+Speaker",
+      "stockQuantity": 60
+    },
+    {
+      "productName": "Smartwatch",
+      "price": 199.99,
+      "description": "A smartwatch with various health tracking features.",
+      "imageURL": "https://placehold.co/600x400/B0E0E6/ffffff?text=Smartwatch",
+      "stockQuantity": 40
+    },
+    {
+      "productName": "Fitness Tracker",
+      "price": 49.99,
+      "description": "A fitness tracker to monitor your daily activities.",
+      "imageURL": "https://placehold.co/600x400/FFB6C1/ffffff?text=Fitness+Tracker",
+      "stockQuantity": 90
+    },
+    {
+      "productName": "Digital Camera",
+      "price": 499.99,
+      "description": "A digital camera with high-resolution image capture.",
+      "imageURL": "https://placehold.co/600x400/98FB98/ffffff?text=Digital+Camera",
+      "stockQuantity": 25
+    },
+    {
+      "productName": "Drone",
+      "price": 299.99,
+      "description": "A drone with a high-definition camera for aerial photography.",
+      "imageURL": "https://placehold.co/600x400/FFDAB9/ffffff?text=Drone",
+      "stockQuantity": 15
+    },
+    {
+      "productName": "Gaming Console",
+      "price": 399.99,
+      "description": "A next-generation gaming console for an immersive experience.",
+      "imageURL": "https://placehold.co/600x400/E6E6FA/ffffff?text=Gaming+Console",
+      "stockQuantity": 20
+    },
+    {
+      "productName": "4K Monitor",
+      "price": 299.99,
+      "description": "A 4K monitor with stunning picture quality.",
+      "imageURL": "https://placehold.co/600x400/FFE4E1/ffffff?text=4K+Monitor",
+      "stockQuantity": 35
+    },
+    {
+      "productName": "Smart Light Bulb",
+      "price": 19.99,
+      "description": "A smart light bulb that can be controlled with your phone.",
+      "imageURL": "https://placehold.co/600x400/AFEEEE/ffffff?text=Smart+Light+Bulb",
+      "stockQuantity": 150
+    },
+    {
+      "productName": "VR Headset",
+      "price": 399.99,
+      "description": "A VR headset for immersive virtual reality experiences.",
+      "imageURL": "https://placehold.co/600x400/F5DEB3/ffffff?text=VR+Headset",
+      "stockQuantity": 25
+    },
+    {
+      "productName": "Action Camera",
+      "price": 149.99,
+      "description": "A compact action camera for capturing adventures.",
+      "imageURL": "https://placehold.co/600x400/DDA0DD/ffffff?text=Action+Camera",
+      "stockQuantity": 40
+    },
+    {
+      "productName": "E-Reader",
+      "price": 129.99,
+      "description": "An e-reader with a high-resolution display and long battery life.",
+      "imageURL": "https://placehold.co/600x400/B0E0E6/ffffff?text=E-Reader",
+      "stockQuantity": 60
+    },
+    {
+      "productName": "Portable Projector",
+      "price": 299.99,
+      "description": "A portable projector for on-the-go presentations and movie nights.",
+      "imageURL": "https://placehold.co/600x400/FFB6C1/ffffff?text=Portable+Projector",
+      "stockQuantity": 30
+    }
+  ]
+  
