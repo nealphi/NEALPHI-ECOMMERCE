@@ -106,15 +106,27 @@ router.get("/validate-token", verifyToken, (req: Request, res: Response) => {
   res.status(200).send({ userId: req.userId });
 });
 
+// router.post("/logout", verifyToken, (req: Request, res: Response) => {
+//   res.cookie("auth_token", "", {
+//     httpOnly: true,  // Same as when you set the cookie
+//     secure: process.env.NODE_ENV === "production", // Use secure in production
+//     // sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" for production, "lax" for development
+//     expires: new Date(0), // Set cookie to expire immediately
+//   });
+//   res.status(200).send({ message: "logged out" });
+// });
+
 router.post("/logout", verifyToken, (req: Request, res: Response) => {
   res.cookie("auth_token", "", {
-    httpOnly: true,  // Same as when you set the cookie
-    secure: process.env.NODE_ENV === "production", // Use secure in production
-    // sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" for production, "lax" for development
-    expires: new Date(0), // Set cookie to expire immediately
+    httpOnly: true,  
+    secure: process.env.NODE_ENV === "production", 
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+    expires: new Date(0),
+    domain: process.env.NODE_ENV === "production" ? ".nealphi-ecommerce.vercel.app" : undefined
   });
   res.status(200).send({ message: "logged out" });
 });
+
 
 router.get(
   "/available-money",
