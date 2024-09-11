@@ -88,10 +88,9 @@ router.post("/login", async (req: Request, res: Response) => {
     );
 
     res.cookie("auth_token", token, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production", // Ensure it's HTTPS
-      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // Cross-site requires SameSite=None in production
-      domain: ".vercel.app", // Allows the cookie to be shared across subdomains
+      httpOnly: true, // Same as when you set the cookie
+      secure: process.env.NODE_ENV === "production", // Use secure in production
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" for production, "lax" for development
       maxAge: 86400000, // 1 day
     });
 
@@ -106,23 +105,12 @@ router.get("/validate-token", verifyToken, (req: Request, res: Response) => {
   res.status(200).send({ userId: req.userId });
 });
 
-// router.post("/logout", verifyToken, (req: Request, res: Response) => {
-//   res.cookie("auth_token", "", {
-//     httpOnly: true,  // Same as when you set the cookie
-//     secure: process.env.NODE_ENV === "production", // Use secure in production
-//     // sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" for production, "lax" for development
-//     expires: new Date(0), // Set cookie to expire immediately
-//   });
-//   res.status(200).send({ message: "logged out" });
-// });
-
 router.post("/logout", verifyToken, (req: Request, res: Response) => {
   res.cookie("auth_token", "", {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production", // Ensure it's HTTPS
-    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // Cross-site requires SameSite=None in production
-    domain: ".vercel.app", // Ensures the cookie is cleared across subdomains
-    expires: new Date(0), // Expires immediately
+    httpOnly: true, // Same as when you set the cookie
+    secure: process.env.NODE_ENV === "production", // Use secure in production
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" for production, "lax" for development
+    expires: new Date(0), // Set cookie to expire immediately
   });
   res.status(200).send({ message: "logged out" });
 });
