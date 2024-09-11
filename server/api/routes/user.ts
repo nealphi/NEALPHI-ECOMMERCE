@@ -89,14 +89,14 @@ router.post("/login", async (req: Request, res: Response) => {
 
     res.cookie("auth_token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production", // Secure only in production
-      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" for production, "lax" for development
-      maxAge: 86400000,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", 
+      domain: process.env.NODE_ENV === "production" ? ".nealphi-ecommerce.vercel.app" : undefined,
     });
 
     res.status(200).json({ userId: user._id });
   } catch (err) {
-    console.error("Login error:", err); // This will log the actual error to your console
+    console.error("Login error:", err); 
     res.status(500).json({ type: "SERVER_ERROR", error: err.message });
   }
 });
