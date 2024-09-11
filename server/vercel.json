@@ -16,6 +16,10 @@
     {
       "source": "/(.*)",
       "headers": [
+        {
+          "key": "Set-Cookie",
+          "value": "SameSite=None"
+        }
       ]
     }
   ]
