@@ -14,7 +14,9 @@
   ],
   "headers": [
     {
-      "source": "/(.*)"
+      "source": "/(.*)",
+      "headers": [
+      ]
     }
   ]
 }
