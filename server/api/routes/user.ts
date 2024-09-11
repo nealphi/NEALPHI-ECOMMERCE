@@ -90,7 +90,7 @@ router.post("/login", async (req: Request, res: Response) => {
     res.cookie("auth_token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production", // Secure only in production
-      // sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" for production, "lax" for development
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" for production, "lax" for development
       maxAge: 86400000,
     });
 
