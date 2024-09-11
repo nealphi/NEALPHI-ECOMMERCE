@@ -232,7 +232,6 @@ export const ShopContextProvider = (props) => {
       await axios.post(`${api}/user/logout`, {}, { withCredentials: true });
       console.log("Logged out successfully");
       window.localStorage.clear();
-      navigate("/auth");
     } catch (error) {
       console.error("Error logging out:", error);
     }
