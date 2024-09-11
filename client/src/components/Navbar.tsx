@@ -84,7 +84,7 @@ export const Navbar = () => {
               <MenuDivider />
               <MenuGroup>
                 <Link
-                  href="/"
+                  href="/auth"
                   _hover={{ textDecoration: "none" }}
                   onClick={logout}
                 >
