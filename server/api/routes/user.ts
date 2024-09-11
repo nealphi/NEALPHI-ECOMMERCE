@@ -90,7 +90,7 @@ router.post("/login", async (req: Request, res: Response) => {
     res.cookie("auth_token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production", // Secure only in production
-      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" for production, "lax" for development
+      // sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" for production, "lax" for development
       maxAge: 86400000,
     });
 
@@ -110,7 +110,7 @@ router.post("/logout", verifyToken, (req: Request, res: Response) => {
   res.cookie("auth_token", "", {
     httpOnly: true,  // Same as when you set the cookie
     secure: process.env.NODE_ENV === "production", // Use secure in production
-    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" for production, "lax" for development
+    // sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" for production, "lax" for development
     expires: new Date(0), // Set cookie to expire immediately
   });
   res.status(200).send({ message: "logged out" });
