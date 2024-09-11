@@ -17,8 +17,8 @@
       "source": "/(.*)",
       "headers": [
         {
-          "key": "Set-Cookie",
-          "value": "SameSite=None"
+          "key": "Cache-Control",
+          "value": "max-age=0"
         }
       ]
     }
