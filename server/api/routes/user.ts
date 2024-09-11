@@ -90,17 +90,15 @@ router.post("/login", async (req: Request, res: Response) => {
     res.cookie("auth_token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", 
-      domain: process.env.NODE_ENV === "production" ? ".nealphi-ecommerce.vercel.app" : undefined,
+      sameSite: "none",
     });
 
     res.status(200).json({ userId: user._id });
   } catch (err) {
-    console.error("Login error:", err); 
+    console.error("Login error:", err);
     res.status(500).json({ type: "SERVER_ERROR", error: err.message });
   }
 });
-
 
 router.get("/validate-token", verifyToken, (req: Request, res: Response) => {
   res.status(200).send({ userId: req.userId });
@@ -118,15 +116,13 @@ router.get("/validate-token", verifyToken, (req: Request, res: Response) => {
 
 router.post("/logout", verifyToken, (req: Request, res: Response) => {
   res.cookie("auth_token", "", {
-    httpOnly: true,  
-    secure: process.env.NODE_ENV === "production", 
-    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "none",
     expires: new Date(0),
-    domain: process.env.NODE_ENV === "production" ? ".nealphi-ecommerce.vercel.app" : undefined
   });
   res.status(200).send({ message: "logged out" });
 });
-
 
 router.get(
   "/available-money",
