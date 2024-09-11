@@ -92,7 +92,6 @@ router.post("/login", async (req: Request, res: Response) => {
       secure: process.env.NODE_ENV === "production", // Use secure in production
       // sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" for production, "lax" for development
       sameSite: "none",
-      domain: ".vercel.app",
       path: "/",
       maxAge: 86400000, // 1 day
     });
@@ -114,7 +113,6 @@ router.post("/logout", verifyToken, (req: Request, res: Response) => {
     secure: process.env.NODE_ENV === "production", // Use secure in production
     // sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // "none" for production, "lax" for development
     sameSite: "none",
-    domain: ".vercel.app",
     path: "/",
     expires: new Date(0), // Set cookie to expire immediately
   });
