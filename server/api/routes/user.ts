@@ -89,8 +89,10 @@ router.post("/login", async (req: Request, res: Response) => {
 
     res.cookie("auth_token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "none",
+      secure: process.env.NODE_ENV === "production", // Ensure it's HTTPS
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // Cross-site requires SameSite=None in production
+      domain: ".vercel.app", // Allows the cookie to be shared across subdomains
+      maxAge: 86400000, // 1 day
     });
 
     res.status(200).json({ userId: user._id });
@@ -117,9 +119,10 @@ router.get("/validate-token", verifyToken, (req: Request, res: Response) => {
 router.post("/logout", verifyToken, (req: Request, res: Response) => {
   res.cookie("auth_token", "", {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "none",
-    expires: new Date(0),
+    secure: process.env.NODE_ENV === "production", // Ensure it's HTTPS
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // Cross-site requires SameSite=None in production
+    domain: ".vercel.app", // Ensures the cookie is cleared across subdomains
+    expires: new Date(0), // Expires immediately
   });
   res.status(200).send({ message: "logged out" });
 });
